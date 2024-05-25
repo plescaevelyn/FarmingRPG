@@ -1,20 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float offsetZ = -5f;
+    public float offsetZ = 5f;
     public float smoothing = 2f;
-
-    // player transform component
+    //player transform component
     Transform playerPos;
-
     // Start is called before the first frame update
     void Start()
     {
-        // Find the player gameobject in the scene and get its transform component
+        //Find the player gameobject in the scene and get its transform component
         playerPos = FindObjectOfType<PlayerController>().transform;
     }
 
@@ -24,13 +21,13 @@ public class CameraController : MonoBehaviour
         FollowPlayer();
     }
 
-    // Following the player
+    //Following the player
     void FollowPlayer()
     {
-        // Position the camera should be in
-        Vector3 targetPosition = new Vector3(playerPos.position.x, transform.position.y, playerPos.position.z + offsetZ);
-        
-        // Set the position accordingly
+        //Position the camera should be in
+        Vector3 targetPosition = new Vector3(playerPos.position.x, transform.position.y, playerPos.position.z - offsetZ);
+
+        //Set the position accordingly
         transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing * Time.deltaTime);
     }
 }

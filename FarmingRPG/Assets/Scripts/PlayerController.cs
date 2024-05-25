@@ -4,79 +4,104 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Movement components
-    private CharacterController characterController;
+    //Movement Components
+    private CharacterController controller;
     private Animator animator;
+
     private float moveSpeed = 4f;
 
     [Header("Movement System")]
+    public float walkSpeed = 4f;
+    public float runSpeed = 8f;
 
-    private float walkSpeed = 4f;
-    private float runSpeed = 8f;
 
-    // Interaction components
+    //Interaction components
     PlayerInteraction playerInteraction;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Get movement components
-        characterController = GetComponent<CharacterController>(); 
+        //Get movement components
+        controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
 
-        // Get interaction components
+        //Get interaction component
         playerInteraction = GetComponentInChildren<PlayerInteraction>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Run function that handles all movements
+        //Runs the function that handles all movement
         Move();
 
-        // Run function that handles all interactions
+        //Runs the function that handles all interaction
         Interact();
-    }
 
-    public void Move()
-    {
-        // Get the horizontal and vertical inputs as a number
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
 
-        // DIrection in a normalised vector
-        Vector3 dir = new Vector3 (horizontal, 0f, vertical).normalized;
-        Vector3 velocity = moveSpeed * Time.deltaTime * dir;
-
-        // Check if sprint key is pressed down
-        if (Input.GetButton("Sprint"))
+        //Debugging purposes only
+        //Skip the time when the right square bracket is pressed
+        if (Input.GetKey(KeyCode.RightBracket))
         {
-            moveSpeed = runSpeed;
-            animator.SetBool("Running", true);
-        } else
-        {
-            moveSpeed = walkSpeed;
-            animator.SetBool("Running", false);
+            TimeManager.Instance.Tick();
         }
-
-        // Check if there is movement
-        if (dir.magnitude > 0.1f)
-        {
-            // Look towards that direction
-            transform.rotation = Quaternion.LookRotation(dir);
-
-            // Move
-            characterController.Move(velocity);
-        }
-
-        animator.SetFloat("Speed", velocity.magnitude);
     }
 
     public void Interact()
     {
+        //Tool interaction
         if (Input.GetButtonDown("Fire1"))
         {
+            //Interact
             playerInteraction.Interact();
         }
+
+        //Item interaction
+        if (Input.GetButtonDown("Fire2"))
+        {
+            playerInteraction.ItemInteract();
+        }
+    }
+
+
+    public void Move()
+    {
+        //Get the horizontal and vertical inputs as a number
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        //Direction in a normalised vector
+        Vector3 dir = new Vector3(horizontal, 0f, vertical).normalized;
+        Vector3 velocity = moveSpeed * Time.deltaTime * dir;
+
+        //Is the sprint key pressed down?
+        if (Input.GetButton("Sprint"))
+        {
+            //Set the animation to run and increase our movespeed
+            moveSpeed = runSpeed;
+            animator.SetBool("Running", true);
+        }
+        else
+        {
+            //Set the animation to walk and decrease our movespeed
+            moveSpeed = walkSpeed;
+            animator.SetBool("Running", false);
+        }
+
+
+        //Check if there is movement
+        if (dir.magnitude >= 0.1f)
+        {
+            //Look towards that direction
+            transform.rotation = Quaternion.LookRotation(dir);
+
+            //Move
+            controller.Move(velocity);
+
+        }
+
+        //Animation speed parameter
+        animator.SetFloat("Speed", velocity.magnitude);
     }
 }

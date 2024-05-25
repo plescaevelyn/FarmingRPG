@@ -61,13 +61,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Land.cs" />
-    <Compile Include="Assets\Scripts\InventoryManager.cs" />
+    <Compile Include="Assets\Scripts\UI\InventorySlot.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
+    <Compile Include="Assets\Scripts\CropBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Inventory\HandInventorySlot.cs" />
     <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
+    <Compile Include="Assets\Scripts\GameTime\ITimeTracker.cs" />
+    <Compile Include="Assets\Scripts\GameTime\TimeManager.cs" />
+    <Compile Include="Assets\Scripts\InteractableObject.cs" />
+    <Compile Include="Assets\Scripts\GameTime\GameTimestamp.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemData.cs" />
+    <Compile Include="Assets\Scripts\RegrowableHarvestBehaviour.cs" />
     <Compile Include="Assets\Scripts\Inventory\EquipmentData.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Inventory\SeedData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Imported Assets\Cartoon_Farm_Crops\README.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
