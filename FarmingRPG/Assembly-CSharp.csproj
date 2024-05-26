@@ -61,6 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ItemSlotData.cs" />
+    <Compile Include="Assets\Imported Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\MouseLook.cs" />
+    <Compile Include="Assets\Imported Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Land.cs" />
     <Compile Include="Assets\Scripts\UI\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
@@ -81,6 +83,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Imported Assets\Cartoon_Farm_Crops\README.txt" />
+    <None Include="Assets\Imported Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Plants_Shader.shader" />
+    <None Include="Assets\Imported Assets\Fantasy Skybox FREE\Readme.txt" />
+    <None Include="Assets\Imported Assets\Fantasy Skybox FREE\ReleaseNotes.txt" />
+    <None Include="Assets\Imported Assets\Polytope Studio\Lowpoly_Village\Sources\Shaders\PT_Buildings_Shader_PBR.shader" />
+    <None Include="Assets\Imported Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Opaque_Shader.shader" />
+    <None Include="Assets\Imported Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Foliage_Shader.shader" />
+    <None Include="Assets\Imported Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Water_Shader.shader" />
+    <None Include="Assets\Imported Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Flowers_Shader.shader" />
+    <None Include="Assets\Imported Assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Rock_Shader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
