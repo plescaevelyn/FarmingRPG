@@ -60,6 +60,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.23f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ItemSlotData.cs" />
     <Compile Include="Assets\Scripts\Land.cs" />
     <Compile Include="Assets\Scripts\UI\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />

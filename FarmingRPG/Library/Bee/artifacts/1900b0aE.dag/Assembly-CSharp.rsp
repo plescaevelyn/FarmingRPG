@@ -364,6 +364,7 @@
 "Assets/Scripts/Inventory/InventoryManager.cs"
 "Assets/Scripts/Inventory/ItemData.cs"
 "Assets/Scripts/Inventory/SeedData.cs"
+"Assets/Scripts/ItemSlotData.cs"
 "Assets/Scripts/Land.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/PlayerInteraction.cs"
