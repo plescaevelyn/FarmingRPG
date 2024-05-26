@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8929893937432125989}
   - component: {fileID: 167250301767755671}
   - component: {fileID: 8706598358041413478}
-  - component: {fileID: 3334108129455273709}
   - component: {fileID: 1631796880956702602}
+  - component: {fileID: 9018177178159184177}
   m_Layer: 0
   m_Name: Land
   m_TagString: Land
@@ -86,7 +86,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3334108129455273709
+--- !u!114 &1631796880956702602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711226723341884992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa7a7f56978a3f4da9c46f48382a228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  landStatus: 0
+  soilMat: {fileID: 2100000, guid: 7168adff448f66143b31caeab93debe3, type: 2}
+  farmlandMat: {fileID: 2100000, guid: 62312fe018a9cef4f83b82e8dfcb87f5, type: 2}
+  wateredMat: {fileID: 2100000, guid: 591ac29522fb31940b76bc7bd1148477, type: 2}
+  select: {fileID: 4954155346744664395}
+  cropPrefab: {fileID: 2726495973675248218, guid: fc823da93d5301540a7830e58e253e77, type: 3}
+--- !u!65 &9018177178159184177
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,24 +125,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1631796880956702602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3711226723341884992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fa7a7f56978a3f4da9c46f48382a228, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  landStatus: 0
-  soilMat: {fileID: 2100000, guid: ac8209875a96052409924b265609f297, type: 2}
-  farmlandMat: {fileID: 2100000, guid: 8f96f9ce734f63f48874f8696171f47f, type: 2}
-  wateredMat: {fileID: 2100000, guid: 73a11399b166da44ba555ee78240513f, type: 2}
-  select: {fileID: 4954155346744664395}
-  cropPrefab: {fileID: 2726495973675248218, guid: fc823da93d5301540a7830e58e253e77, type: 3}
 --- !u!1 &4954155346744664395
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 8455653433227805363}
   - component: {fileID: 2218792131856583195}
   - component: {fileID: 56418864463979672}
-  - component: {fileID: 5538751288594984417}
   m_Layer: 0
   m_Name: Select
   m_TagString: Untagged
@@ -153,8 +152,8 @@ Transform:
   m_GameObject: {fileID: 4954155346744664395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.576, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8929893937432125989}
@@ -187,7 +186,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 335b8a5b82ec6ea49b89594b5188d699, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -209,24 +208,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5538751288594984417
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4954155346744664395}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

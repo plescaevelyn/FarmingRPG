@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7730108265652452380, guid: a030274c7ebed2c418f75218119b5d98, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a030274c7ebed2c418f75218119b5d98, type: 3}
       propertyPath: m_Name
       value: Character
@@ -58,13 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 41cf68fb3a8ebbe44a9c80eab55af239, type: 2}
     - target: {fileID: 5866666021909216657, guid: a030274c7ebed2c418f75218119b5d98, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig6:Hips'\n\tTransform 'mixamorig6:Neck'\n\tTransform
-        'mixamorig6:RightShoulder'\n\tTransform 'mixamorig6:LeftShoulder'\n\tTransform
-        'mixamorig6:Hips'\n\tTransform 'mixamorig6:Spine'\n\tTransform 'mixamorig6:RightArm'\n\tTransform
-        'mixamorig6:LeftUpLeg'\n\tTransform 'mixamorig6:LeftFoot'\n\tTransform 'mixamorig6:RightHand'\n\tand
-        more ...\n\tFrom animation clip 'Idle'"
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73,6 +71,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a030274c7ebed2c418f75218119b5d98, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5174065689906191943}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a030274c7ebed2c418f75218119b5d98, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2655313927897007865}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a030274c7ebed2c418f75218119b5d98, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4176453649931095177}
@@ -96,6 +97,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 4
   runSpeed: 8
+--- !u!114 &2655313927897007865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2398177299716514298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f78ec2b515f94f4dbdb02cb0468cc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!143 &4176453649931095177
 CharacterController:
   m_ObjectHideFlags: 0

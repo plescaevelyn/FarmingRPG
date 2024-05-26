@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c8f2157bd160d24c99c6ebfbce1211c, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
-  description: 
+  description: Cutting wood and other stuff
   thumbnail: {fileID: 1366626852, guid: 4f0285a1e172e36419fde8597456e392, type: 3}
   gameModel: {fileID: 0}
-  toolType: 0
+  toolType: 2
