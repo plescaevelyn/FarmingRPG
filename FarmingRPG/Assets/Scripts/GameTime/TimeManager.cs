@@ -31,13 +31,13 @@ public class TimeManager : MonoBehaviour
             Instance = this;
         }
     }
+
     // Start is called before the first frame update
     void Start()
     {
         //Initialise the time stamp
         timestamp = new GameTimestamp(0, GameTimestamp.Season.Spring, 1, 6, 0);
         StartCoroutine(TimeUpdate());
-
     }
 
     IEnumerator TimeUpdate()
@@ -47,9 +47,7 @@ public class TimeManager : MonoBehaviour
             Tick();
             yield return new WaitForSeconds(1 / timeScale);
         }
-
     }
-
 
     //A tick of the in-game time
     public void Tick()
